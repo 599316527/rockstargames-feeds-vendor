@@ -9,8 +9,8 @@ rss(version="2.0")
             item
                 title <![CDATA[#{post.title}]]>
                 description <![CDATA[
-                    | <img src="#{post.preview_images_parsed.featured.src}" />
-                    | !{post.blurb}
+                    | <p><img src="#{post.preview_images_parsed.featured.src}"/></p>
+                    | <p>!{post.blurb}</p>
                     | ]]>
                 author rockstargames
                 link #{post.link}

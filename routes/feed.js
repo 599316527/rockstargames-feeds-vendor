@@ -21,8 +21,14 @@ router.get('/rss', async function (req, res, next) {
         }
     }
 
-    let newsData = await getNewsData(lang, tag)
-    debugger
+    let newsData
+    try {
+        newsData = await getNewsData(lang, tag)
+    }
+    catch (err) {
+        console.log('[ERR] getNewsData', err)
+        next(err)
+    }
 
     res.type('text/xml')
     res.render('feed', newsData)
