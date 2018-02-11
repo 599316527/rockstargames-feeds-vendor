@@ -1,0 +1,19 @@
+doctype xml
+rss(version="2.0")
+    channel
+        title <![CDATA[#{meta.title}]]>
+        link https://www.rockstargames.com/#{meta.lang}/newswire
+        description <![CDATA[#{meta.description}]]>
+
+        each post in posts
+            item
+                title <![CDATA[#{post.title}]]>
+                description <![CDATA[
+                    | <img src="#{post.preview_images_parsed.featured.src}" />
+                    | !{post.blurb}
+                    | ]]>
+                author rockstargames
+                link #{post.link}
+                category #{post.tags}
+                enclosure(url=post.preview_video_src type="video/mp4")
+                guid(isPermaLink="true") #{post.link}

@@ -1,0 +1,43 @@
+{
+  "name": "rockstargames-feeds-vendor",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DEBUG=rockstargames-feeds-vendor:* npm start"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "less-middleware": "~2.2.1",
+    "memory-cache": "^0.2.0",
+    "mongo-query-compiler": "^1.0.0",
+    "morgan": "~1.9.0",
+    "node-fetch": "^2.0.0",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5"
+  },
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/599316527/rockstargames-feeds-vendor.git"
+  },
+  "keywords": [
+    "rockstar",
+    "rss"
+  ],
+  "author": "Kyle <hekai1229@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/599316527/rockstargames-feeds-vendor/issues"
+  },
+  "homepage": "https://github.com/599316527/rockstargames-feeds-vendor#readme",
+  "description": ""
+}

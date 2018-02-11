@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='stylesheets/index.css')
+
+    h1= title
+    h2 Get your own feed subscription
+
+    div.row
+        label(for="language") Language
+        select#language.value.language
+            each language in languages
+                option(value=language[0] selected=(language[0] === 'zh')) #{language[1]}
+
+    div.row
+        label(for="feed-url") Feed Url
+        input#feed-url.value.url(readonly type="url")
+
+    details
+        summary Extra Options
+        div.row
+            a.tip(href="https://docs.mongodb.com/manual/reference/operator/query/" target="_blank")
+                span ?
+            label(for="tag-filter") Tag Filter
+            textarea#tag-filter.value.tag(placeholder="{\"name\":\"GTA 在线模式\"}")
+
+    script(src='javascripts/index.js')
+
